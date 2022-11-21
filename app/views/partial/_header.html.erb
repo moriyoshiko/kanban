@@ -1,0 +1,21 @@
+<header class="header">
+  <nav class="nav">
+    <ul class="header_menu">
+      <li class="nav-link"><%= link_to "#{current_user.name}", list_edit_user_name_path %>さん</li>
+      <%#= link_to(content_tag(:i, '', class: 'fas fa-pen'), edit_list_path(list)) %>
+      <li class="header_menu_title"><%= link_to "TaskManagement", root_path, class: "nav-link" %></li>
+      <li>
+        <ul class="header_menu_inner">
+          <%# リストを作成するリンクは今後開発していくので、今は"#"にしておきます。 %>
+          <li>
+          <%= link_to new_list_path, class: "nav-link" do %>
+              <span class="mr-1">リストを作成</span>
+              <i class="fas fa-edit"></i>
+            <% end %>
+          </li>
+          <li><%= link_to "サインアウト", destroy_user_session_path, class: "nav-link", method: :get %></li>
+        </ul>
+      </li>
+    </ul>
+  </nav>
+</header>
