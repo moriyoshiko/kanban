@@ -22,7 +22,7 @@ Rails.application.configure do
 
   # Disable serving static files from the `/public` folder by default since
   # Apache or NGINX already handles this.
-  config.public_file_server.enabled = ENV["RAILS_SERVE_STATIC_FILES"].present? || ENV['RENDER'].present?
+  config.public_file_server.enabled = ENV["RAILS_SERVE_STATIC_FILES"].present?
 
   # Compress CSS using a preprocessor.
   # config.assets.css_compressor = :sass
@@ -91,7 +91,4 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
-  DB_PASSWORD = 'vPW97MgZPWMa2txCuPG8mTGlWkEh9RSj'
-  DATABASE_URL = 'postgres://moriyoshiko:vPW97MgZPWMa2txCuPG8mTGlWkEh9RSj@dpg-cdur2v1gp3joutk3elh0-a/render_app_vlbq'
-  RAILS_MASTER_KEY = '2ce53ef1db2ec07ff3b42a7447b36871'
 end
